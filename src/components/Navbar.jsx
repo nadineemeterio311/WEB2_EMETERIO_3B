@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
       <div className="container">
-        <NavLink className="navbar-brand fw-bold" to="/">EMETERIO</NavLink>
+        <NavLink className="navbar-brand fw-bold" to="/">Emeterio FurLuxe</NavLink>
 
         <button
           className="navbar-toggler"
@@ -20,12 +20,14 @@ function Navbar() {
             <li className="nav-item">
               <NavLink className="nav-link" to="/">Home</NavLink>
             </li>
+           
             <li className="nav-item">
               <NavLink className="nav-link" to="/about">About</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/login">Login</NavLink>
             </li>
+          
             <li className="nav-item">
               <NavLink className="btn btn-outline-light btn-sm px-3" to="/register">Register</NavLink>
             </li>

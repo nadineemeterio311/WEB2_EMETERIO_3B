@@ -12,7 +12,7 @@ function App() {
     <div className="app-wrapper">
       <Navbar />
 
-      {/* Main content */}
+      {/* Main content grows to fill space */}
       <main className="content">
         <Routes>
           <Route path="/" element={<Home />} />

@@ -1,7 +1,30 @@
+/* Reset and basic styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* App wrapper uses flex layout */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Main content grows to push footer down */
+.content {
+  flex: 1;
+}
+
+/* Footer styling */
 .footer {
   background-color: #212529;
   color: #f8f9fa;
   padding: 15px 0;
+  margin-top: auto; /* Ensures footer sticks to bottom */
 }
 
 .footer a {
@@ -12,3 +35,30 @@
 .footer a:hover {
   color: #0d6efd;
 }
+
+/* Navbar improvements */
+.navbar {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #f8f9fa !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #0d6efd !important;
+}
+
+/* Utility classes for spacing and images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
