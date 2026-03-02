@@ -1,35 +1,67 @@
-import { NavLink } from "react-router-dom";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-      <div className="container">
-        <NavLink className="navbar-brand fw-bold" to="/">Emeterio FurLuxe</NavLink>
+  const location = useLocation();
 
+  return (
+    <nav className="navbar navbar-expand-lg navbar-dark bg-success">
+      <div className="container">
+        <Link className="navbar-brand fw-bold" to="/">
+          🐾 FurLuxe
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/">Home</NavLink>
+              <Link 
+                className={`nav-link ${location.pathname === "/" ? "active" : ""}`} 
+                to="/"
+              >
+                Home
+              </Link>
             </li>
-           
             <li className="nav-item">
-              <NavLink className="nav-link" to="/about">About</NavLink>
+              <Link 
+                className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} 
+                to="/about"
+              >
+                About
+              </Link>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/login">Login</NavLink>
+              <Link 
+                className={`nav-link ${location.pathname === "/login" ? "active" : ""}`} 
+                to="/login"
+              >
+                Login
+              </Link>
             </li>
-          
             <li className="nav-item">
-              <NavLink className="btn btn-outline-light btn-sm px-3" to="/register">Register</NavLink>
+              <Link 
+                className={`nav-link ${location.pathname === "/register" ? "active" : ""}`} 
+                to="/register"
+              >
+                Register
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link 
+                className={`nav-link ${location.pathname.startsWith("/admin") ? "active" : ""}`} 
+                to="/admin"
+              >
+                Admin
+              </Link>
             </li>
           </ul>
         </div>
